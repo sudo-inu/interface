@@ -19,7 +19,7 @@ export const useReward = (pid: number) => {
     args: [pid, address],
     description: `Harvesting ${tokenName} rewards`,
     overrides: {
-      gasLimit: '150000',
+      gasLimit: '250000',
     },
   })
 

@@ -61,24 +61,28 @@ const Button: React.FC<ButtonProps> = ({
       fontSize = 16
   }
 
-  const WrappingLink = href ? Link : React.Fragment
+  const InnerLink = (
+    <a {...(!disabled ? { onClick } : { style: { cursor: 'default' } })}>
+      <StyledButton
+        boxShadow={boxShadow}
+        color={buttonColor}
+        disabled={disabled}
+        fontSize={fontSize}
+        padding={buttonPadding}
+        size={buttonSize}
+      >
+        {children}
+        {text}
+      </StyledButton>
+    </a>
+  )
 
-  return (
-    <WrappingLink {...(href ? { passHref: true, href } : {})}>
-      <a {...(!disabled ? { onClick } : { style: { cursor: 'default' } })}>
-        <StyledButton
-          boxShadow={boxShadow}
-          color={buttonColor}
-          disabled={disabled}
-          fontSize={fontSize}
-          padding={buttonPadding}
-          size={buttonSize}
-        >
-          {children}
-          {text}
-        </StyledButton>
-      </a>
-    </WrappingLink>
+  return href ? (
+    <Link passHref href={href}>
+      {InnerLink}
+    </Link>
+  ) : (
+    InnerLink
   )
 }
 
