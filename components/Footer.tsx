@@ -15,7 +15,7 @@ const Nav: React.FC = () => {
       </StyledLink>
       <StyledLink
         target="_blank"
-        href="https://v2.info.uniswap.org/pair/0x096c24c5bc54a2714d5db90ea46d8c4140aebe5d"
+        href="https://v2.info.uniswap.org/pair/0x6cca892667b10eebce01e9302348efadef51326c"
       >
         Uniswap XMON-SNACK
       </StyledLink>

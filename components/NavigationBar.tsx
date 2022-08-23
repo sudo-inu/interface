@@ -77,7 +77,7 @@ const NavigationBar = () => {
           </Link>
           <Link
             passHref
-            href="https://app.uniswap.org/#/swap?chain=mainnet&outputCurrency=0x3aada3e213abf8529606924d8d1c55cbdc70bf74"
+            href="https://app.uniswap.org/#/swap?chain=mainnet&outputCurrency=0x93b743Fb12a2677adB13093f8eA8464A436DA008"
           >
             <A>Buy SNACKS</A>
           </Link>
