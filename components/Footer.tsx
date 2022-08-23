@@ -4,7 +4,10 @@ import styled from 'styled-components'
 const Nav: React.FC = () => {
   return (
     <StyledNav>
-      <StyledLink target="_blank" href="https://etherscan.io/address/#code">
+      <StyledLink
+        target="_blank"
+        href="https://etherscan.io/address/0x32E9BB1E0E03fdaC8131De202Be2f55AceDB349f#code"
+      >
         SnackShack Contract
       </StyledLink>
       <StyledLink
