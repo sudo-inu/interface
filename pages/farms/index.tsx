@@ -1,1 +1,1 @@
-export { default, pools } from './Farms'
+export { default } from './Farms'

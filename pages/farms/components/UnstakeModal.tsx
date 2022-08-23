@@ -29,7 +29,7 @@ const UnstakeModal: React.FC<UnstakeModalProps> = ({
   const [pendingTx, setPendingTx] = useState(false)
 
   const fullBalance = useMemo(() => {
-    return getFullDisplayBalance(max)
+    return getFullDisplayBalance(max || new BigNumber(0))
   }, [max])
 
   const handleChange = useCallback(

@@ -101,7 +101,7 @@ const EmojiFront = styled.div`
 `
 
 const DoubleEmoji: FC<{ emoji: string }> = ({ emoji }) => {
-  const [emoji1, emoji2] = Array.from(emoji)
+  const [emoji1, emoji2] = Array.from(emoji || [])
   return (
     <>
       <EmojiBack>{emoji1}</EmojiBack>
@@ -123,7 +123,7 @@ const PoolIcon: FC<Props> = ({
   showHighlight = false,
   exponential = false,
 }) => {
-  const isDoubleEmoji = emoji.length === 2
+  const isDoubleEmoji = emoji && emoji.length === 2
   const hasHighlight = [
     'XMON/SNACK Uni-v2 LP',
     'Sudo INU Buy Wall LP',

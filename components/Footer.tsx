@@ -15,9 +15,9 @@ const Nav: React.FC = () => {
       </StyledLink>
       <StyledLink
         target="_blank"
-        href="https://uniswap.info/pair/0xce84867c3c02b05dc570d0135103d3fb9cc19433"
+        href="https://v2.info.uniswap.org/pair/0x096c24c5bc54a2714d5db90ea46d8c4140aebe5d"
       >
-        Uniswap XMINU-ETH
+        Uniswap XMON-SNACK
       </StyledLink>
       <StyledLink target="_blank" href="https://github.com/sudo-inu">
         Github
