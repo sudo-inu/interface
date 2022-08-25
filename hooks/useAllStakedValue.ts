@@ -16,11 +16,12 @@ export interface StakedValue {
 }
 
 const tokenPrice = {
-  0: BigNumber.from('1000000000000000000'),
+  0: BigNumber.from('20000000000000'),
   1: BigNumber.from('100000000000000000'),
-  2: BigNumber.from('10000000000000'),
+  2: BigNumber.from('5000000000'),
   3: BigNumber.from('50000000000000000'),
   4: BigNumber.from('100000000000000000'),
+  5: BigNumber.from('200000000000000'),
 }
 
 export const getTotalLPWethValue = async (
@@ -39,24 +40,6 @@ export const getTotalLPWethValue = async (
     .mul(BigNumber.from(100))
     .div(BigNumber.from(totalAllocPoint))
 
-  if (Number(tokenAmount) > 0) {
-    const { buyAmount: totalWethValue, price: tokenPriceInWeth } =
-      await get0xPrice(lpTokenContract.address, tokenAmount)
-
-    return {
-      tokenAmount,
-      poolWeight,
-      totalWethValue: totalWethValue
-        ? BigNumber.from(totalWethValue)
-        : BigNumber.from(tokenAmount)
-            .mul(tokenPrice[pid as keyof typeof tokenPrice])
-            .div(BigNumber.from(10).pow(18)),
-      tokenPriceInWeth: tokenPriceInWeth
-        ? BigNumber.from(tokenPriceInWeth)
-        : tokenPrice[pid as keyof typeof tokenPrice],
-    }
-  }
-
   const tokenPriceInWeth = BigNumber.from(
     tokenPrice[pid as keyof typeof tokenPrice]
   )
@@ -65,7 +48,12 @@ export const getTotalLPWethValue = async (
     tokenAmount,
     poolWeight,
     tokenPriceInWeth,
-    totalWethValue: BigNumber.from(1),
+    totalWethValue:
+      Number(tokenAmount) > 0
+        ? tokenPriceInWeth
+            .mul(tokenAmount)
+            .div(BigNumber.from('1' + '0'.repeat(18)))
+        : BigNumber.from(1),
   }
 }
 
