@@ -17,6 +17,7 @@ export enum PoolId {
   SNACK_ERC20 = 2,
   SUDO_XMINU_BUY_WALL_LP_ERC20 = 3,
   SUDO_XMINU_HIGH_FEE_TRADE_LP_ERC20 = 4,
+  ETH_SNACK_UNIV2_LP = 5,
 }
 
 export enum SudoswapPoolType {
@@ -59,18 +60,8 @@ export const pools: Pool[] = [
     slug: 'Snack-Fest',
     emoji: '🦑🍪',
     name: 'Snack Fest!',
-    token: 'XMON/SNACK Uni-v2 LP',
+    token: 'SNACK/XMON Uni-v2 LP',
     rewards: '10x',
-    tokenAddressA: {
-      [chainId.mainnet]: contracts[chainId.mainnet].XMON_ERC20,
-      [chainId.rinkeby]: contracts[chainId.rinkeby].XMON_ERC20,
-    },
-    tokenTypeA: TokenType.ERC20,
-    tokenAddressB: {
-      [chainId.mainnet]: contracts[chainId.mainnet].SNACK_ERC20,
-      [chainId.rinkeby]: contracts[chainId.rinkeby].SNACK_ERC20,
-    },
-    tokenTypeB: TokenType.ERC20,
     lpAddress: {
       [chainId.mainnet]: contracts[chainId.mainnet].XMON_SNACK_UNIV2_LP,
       [chainId.rinkeby]: contracts[chainId.rinkeby].XMON_SNACK_UNIV2_LP,
@@ -85,16 +76,6 @@ export const pools: Pool[] = [
     rewards: '25x',
     exponential: true,
     transferToken: 'Sudo INU Buy-Side SudoSwap LP',
-    tokenAddressA: {
-      [chainId.mainnet]: contracts[chainId.mainnet].WETH,
-      [chainId.rinkeby]: contracts[chainId.rinkeby].WETH,
-    },
-    tokenTypeA: TokenType.WETH,
-    tokenAddressB: {
-      [chainId.mainnet]: contracts[chainId.mainnet].XMINU_ERC721,
-      [chainId.rinkeby]: contracts[chainId.rinkeby].XMINU_ERC721,
-    },
-    tokenTypeB: TokenType.ERC721,
     lpAddress: {
       [chainId.mainnet]:
         contracts[chainId.mainnet].SUDO_XMINU_BUY_WALL_LP_ERC20,
@@ -124,16 +105,6 @@ export const pools: Pool[] = [
     rewards: '10x',
     exponential: true,
     transferToken: 'Sudo INU Trade SudoSwap LP',
-    tokenAddressA: {
-      [chainId.mainnet]: contracts[chainId.mainnet].WETH,
-      [chainId.rinkeby]: contracts[chainId.rinkeby].WETH,
-    },
-    tokenTypeA: TokenType.WETH,
-    tokenAddressB: {
-      [chainId.mainnet]: contracts[chainId.mainnet].XMINU_ERC721,
-      [chainId.rinkeby]: contracts[chainId.rinkeby].XMINU_ERC721,
-    },
-    tokenTypeB: TokenType.ERC721,
     lpAddress: {
       [chainId.mainnet]:
         contracts[chainId.mainnet].SUDO_XMINU_HIGH_FEE_TRADE_LP_ERC20,
@@ -178,19 +149,18 @@ export const pools: Pool[] = [
       [chainId.rinkeby]: contracts[chainId.rinkeby].WRAPPED_XMINU_ERC20,
     },
   },
-  // {
-  //   pid: PoolId.XMON_ERC20,
-  //   slug: 'Squids',
-  //   // TODO: ADD sudoswap sound effect
-  //   emoji: '🦑',
-  //   name: 'Sudo Squids',
-  //   token: 'XMON',
-  //   rewards: '1x',
-  //   lpAddress: {
-  //     [chainId.mainnet]: contracts[chainId.mainnet].XMON_ERC20,
-  //     [chainId.rinkeby]: contracts[chainId.rinkeby].XMON_ERC20,
-  //   },
-  // },
+  {
+    pid: PoolId.ETH_SNACK_UNIV2_LP,
+    slug: 'Snack-Party',
+    emoji: '🐈🍪',
+    name: 'Snack Party!',
+    token: 'SNACK/ETH Uni-v2 LP',
+    rewards: '10x',
+    lpAddress: {
+      [chainId.mainnet]: contracts[chainId.mainnet].ETH_SNACK_UNIV2_LP,
+      [chainId.rinkeby]: contracts[chainId.rinkeby].ETH_SNACK_UNIV2_LP,
+    },
+  },
 ]
 
 export default pools

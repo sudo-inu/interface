@@ -7,6 +7,7 @@ export enum SupportedChains {
 
 export enum ContractNames {
   WETH = 'WETH',
+  ETH_SNACK_UNIV2_LP = 'ETH_SNACK_UNIV2_LP',
   XMON_SNACK_UNIV2_LP = 'XMON_SNACK_UNIV2_LP',
   XMON_ERC20 = 'XMON_ERC20',
   SNACK_ERC20 = 'SNACK_ERC20',
@@ -27,6 +28,7 @@ export type ContractAddresses = {
 export const contracts: ContractAddresses = {
   [chainId.mainnet]: {
     WETH: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+    ETH_SNACK_UNIV2_LP: '0xe9e3803b70037ba6606f91b1be3065665d58e57e',
     XMON_SNACK_UNIV2_LP: '0x6cca892667b10eebce01e9302348efadef51326c',
     XMON_ERC20: '0x3aada3e213abf8529606924d8d1c55cbdc70bf74',
     SNACK_ERC20: '0x93b743Fb12a2677adB13093f8eA8464A436DA008',
@@ -42,6 +44,7 @@ export const contracts: ContractAddresses = {
   },
   [chainId.rinkeby]: {
     WETH: '0xc778417E063141139Fce010982780140Aa0cD5Ab',
+    ETH_SNACK_UNIV2_LP: '0xcdd00542aaf6bfbf5c8b7012c7e3a955bd1d2323',
     XMON_SNACK_UNIV2_LP: '0x2b7AD8cC21EDf88c0Bab67820b49DF867Fd61B9A',
     XMON_ERC20: '0x8D4Cf8213976F2B12A9D161539388f145b769261',
     SNACK_ERC20: '0x44638Aa542F859F9195115534536B6442Ee4B48b',
