@@ -152,25 +152,14 @@ const Stake: React.FC<StakeProps> = ({
                     />
                     <StyledActionSpacer />
 
-                    <div
-                      data-tip
-                      data-for={pid === 4 ? 'deposit-pid-4' : 'n/A'}
+                    <IconButton
+                      disabled={tokenBalance.eq(new BigNumber(0))}
+                      onClick={
+                        exponential ? onPresentDepositSudo : onPresentDeposit
+                      }
                     >
-                      <IconButton
-                        disabled={
-                          tokenBalance.eq(new BigNumber(0)) || pid === 4
-                        }
-                        onClick={
-                          exponential ? onPresentDepositSudo : onPresentDeposit
-                        }
-                      >
-                        <AddIcon disabled={tokenBalance.eq(new BigNumber(0))} />
-                      </IconButton>
-                    </div>
-
-                    <Tooltip border id="deposit-pid-4" type="warning">
-                      <div style={{ fontSize: 16 }}>Temporarily disabled</div>
-                    </Tooltip>
+                      <AddIcon disabled={tokenBalance.eq(new BigNumber(0))} />
+                    </IconButton>
                   </>
                 )}
               </>

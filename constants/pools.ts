@@ -57,7 +57,7 @@ export interface Pool {
 export const pools: Pool[] = [
   {
     pid: PoolId.XMON_SNACK_UNIV2_LP,
-    slug: 'Snack-Fest',
+    slug: 'snack-fest',
     emoji: '🦑🍪',
     name: 'Snack Fest!',
     token: 'SNACK/XMON Uni-v2 LP',
@@ -69,7 +69,7 @@ export const pools: Pool[] = [
   },
   {
     pid: PoolId.SUDO_XMINU_BUY_WALL_LP_ERC20,
-    slug: 'Saudis',
+    slug: 'saudis',
     emoji: '🐶💪',
     name: 'Sudo Inu Saudis',
     token: 'Sudo INU Buy Wall LP',
@@ -98,7 +98,7 @@ export const pools: Pool[] = [
   },
   {
     pid: PoolId.SUDO_XMINU_HIGH_FEE_TRADE_LP_ERC20,
-    slug: 'Interesting',
+    slug: 'interesting',
     emoji: '🐕',
     name: 'Interesting...aaaaaaaa',
     token: 'Sudo INU High-Fee Trade Pool LP',
@@ -127,7 +127,7 @@ export const pools: Pool[] = [
   },
   {
     pid: PoolId.SNACK_ERC20,
-    slug: 'Snack-Time',
+    slug: 'snack-time',
     emoji: '🍪',
     name: 'Snack Time',
     token: 'SNACK',
@@ -139,7 +139,7 @@ export const pools: Pool[] = [
   },
   {
     pid: PoolId.WRAPPED_XMINU_ERC20,
-    slug: 'Pups',
+    slug: 'pups',
     emoji: '🐶',
     name: 'Sudo Inu Pups',
     token: 'Wrapped Sudo INU NFT',
@@ -151,7 +151,7 @@ export const pools: Pool[] = [
   },
   {
     pid: PoolId.ETH_SNACK_UNIV2_LP,
-    slug: 'Snack-Party',
+    slug: 'snack-party',
     emoji: '🐈🍪',
     name: 'Snack Party!',
     token: 'SNACK/ETH Uni-v2 LP',
