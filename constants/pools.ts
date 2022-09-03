@@ -52,6 +52,7 @@ export interface Pool {
     nft: ContractAddress
     minimumDeposit: string
   }
+  openseaSlug?: string
 }
 
 export const pools: Pool[] = [
@@ -143,6 +144,7 @@ export const pools: Pool[] = [
     emoji: '🐶',
     name: 'Sudo Inu Pups',
     token: 'Wrapped Sudo INU NFT',
+    openseaSlug: 'sudo-inu',
     rewards: '2x',
     lpAddress: {
       [chainId.mainnet]: contracts[chainId.mainnet].WRAPPED_XMINU_ERC20,
